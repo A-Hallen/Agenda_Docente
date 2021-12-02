@@ -1,0 +1,19 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    android:id="@+id/parentWidgetLayout"
+    android:background="@color/modern_easy_gray">
+    <GridView
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gb_horary"
+        android:numColumns="8"
+        android:stretchMode="columnWidth"
+        />
+
+</RelativeLayout>

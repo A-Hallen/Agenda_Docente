@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="underline">#dad8ad</color>
+    <color name="antiquewhite0">#FAEBD7</color>
+    <color name="antiquewhite">#6DFAEBD7</color>
+    <color name="antiquewhite2">#4FFAEBD7</color>
+    <color name="gray">#616060</color>
+    <color name="dark_gray">#1B1B1B</color>
+    <color name="brown">#570000</color>
+    <color name="redBlood">#FF0000</color>
+    <color name="transparente">#00FFFFFF</color>
+    <color name="glass">#703C3C3C</color>
+    <color name="darkGlass">#A9000000</color>
+    <color name="mediumDarkGlass">#2D000000</color>
+    <color name="almostBlackGlass">#57000000</color>
+    <color name="almostBlack">#8B000000</color>
+    <color name="almostalmostBlack">#BC000000</color>
+    <color name="rippleBtnColor">#60D1D1D1</color>
+    <color name="mura">#60B08EFF</color>
+    <color name="muraslow">#60DAD0F3</color>
+    <color name="green">#FA42FF00</color>
+    <color name="edit_text_background">#FA86C371</color>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="modern_gray">#0c0c0c</color>
+    <color name="modern_easy_gray">#161616</color>
+</resources>

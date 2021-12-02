@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="_0">0</string>
+    <string name="sumar">sumar</string>
+    <string name="_3">3</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="restar">restar</string>
+    <string name="_6">6</string>
+    <string name="_5">5</string>
+    <string name="_4">4</string>
+    <string name="multiplicar">multiplicar</string>
+    <string name="_9">9</string>
+    <string name="_8">8</string>
+    <string name="_7">7</string>
+    <string name="dividir">dividir</string>
+    <string name="porciento">%</string>
+    <string name="delete">Del</string>
+    <string name="deleteAll">deleteAll</string>
+    <string name="point">.</string>
+    <string name="igual">=</string>
+    <string name="r">R</string>
+    <string name="_30">30</string>
+    <string name="error">A ocurrido un error</string>
+    <string name="_20">20</string>
+    <string name="invertir">Invertir</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+
+    <!--
+    This will be Strings for the signatures
+    -->
+    <string name="Matemáticas">M</string>
+    <string name="Español">E</string>
+    <string name="Historia">H</string>
+    <string name="Química">Q</string>
+    <string name="Biología">B</string>
+    <string name="Geografía">G</string>
+    <string name="Física">F</string>
+    <string name="Informática">INF</string>
+    <string name="Inglés">I</string>
+    <string name="Educacion_Física">EF></string>
+    <string name="loading">Loading...</string>
+
+</resources>
