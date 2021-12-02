@@ -2,7 +2,7 @@ package com.hallen.agendadocente
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
+import android.os.Bundle
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import com.hallen.agendadocente.horario.HSaredPreferences
@@ -25,9 +25,7 @@ class ExampleWidgetService : RemoteViewsService() {
 
         val prefs = HSaredPreferences(applicationContext)
 
-        prefs.saveCell("10`1", "00")
-        prefs.saveCell("12`2", "05")
-        prefs.saveCell("12`1", "85")
+        //prefs.saveCell("10`1", "00")
 
         for(i in 0 until 10){
             for(e in 0 until 8){
@@ -42,22 +40,6 @@ class ExampleWidgetService : RemoteViewsService() {
         RemoteViewsFactory {
 
         private val exampleData = list
-        /* private val exampleData = arrayOf(
-            "T", "L",     "M",    "X",    "J",     "V",    "",     "",
-            "1",  "",     "12º3", "",     "",      "10º1", "7:45", "8:30",
-            "2",  "",     "12º2", "",     "",      "",     "8:35", "9:20",
-            "3",  "",     "10º2", "",     "",      "",     "9:25", "10:10",
-            "R",  "",     "",     "",     "",      "",     "", "",
-            "4",  "10º1", "",     "10º2", "",      "",     "10:25", "11:10",
-            "5",  "12º2", "",     "",     "12º3",  "",     "11:15", "12:00",
-            "M",  "",     "",     "",     "",      "",     "",      "",
-            "1",  "",     "",     "",     "",      "",     "12:15", "1:00",
-            "2",  "",     "",     "",     "",      "",     "1:05", "1:50",
-            "3",  "",     "",     "",     "",      "",     "1:55", "2:40",
-            "4",  "",     "",     "",     "",      "",     "3:00", "3:45",
-            "5",  "",     "",     "",     "",      "",     "3:50", "4:35"
-        )
-        */
 
         override fun onCreate() {}
         override fun onDataSetChanged() {}
@@ -67,9 +49,16 @@ class ExampleWidgetService : RemoteViewsService() {
         }
 
         override fun getViewAt(position: Int): RemoteViews {
-            val views = RemoteViews(context.packageName, R.layout.grid_item)
-            views.setTextViewText(R.id.tv_item, exampleData[position])
-            return views
+            return RemoteViews(context.packageName, R.layout.grid_item).apply {
+                setTextViewText(R.id.tv_item, exampleData[position])
+                val fillIntent = Intent().apply {
+                    Bundle().also { extras ->
+                        extras.putInt(EXTRA_ITEM, position)
+                        putExtras(extras)
+                    }
+                }
+                setOnClickFillInIntent(R.id.tv_item, fillIntent)
+            }
         }
 
         override fun getLoadingView(): RemoteViews {
