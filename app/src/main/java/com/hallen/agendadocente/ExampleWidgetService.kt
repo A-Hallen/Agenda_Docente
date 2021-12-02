@@ -3,11 +3,13 @@ package com.hallen.agendadocente
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
 import com.hallen.agendadocente.horario.HSaredPreferences
 
 class ExampleWidgetService : RemoteViewsService() {
+
     override fun onGetViewFactory(intent: Intent): RemoteViewsFactory {
         val list  = arrayListOf<String>()
         //Instantiate the database
@@ -25,9 +27,10 @@ class ExampleWidgetService : RemoteViewsService() {
 
         val prefs = HSaredPreferences(applicationContext)
 
-        //prefs.saveCell("10`1", "00")
+        Log.i("PREFS", "The onGetViewFactory function from ExampleWidgetService has been triggered")
 
-        for(i in 0 until 10){
+
+        for(i in 1 until 14){
             for(e in 0 until 8){
                 val content = prefs.getCell("$i$e")
                 list.add(content)
@@ -49,6 +52,7 @@ class ExampleWidgetService : RemoteViewsService() {
         }
 
         override fun getViewAt(position: Int): RemoteViews {
+            Log.i("PREFS", "The getViewAt function from ExampleWidgetFactory class has been triggered")
             return RemoteViews(context.packageName, R.layout.grid_item).apply {
                 setTextViewText(R.id.tv_item, exampleData[position])
                 val fillIntent = Intent().apply {

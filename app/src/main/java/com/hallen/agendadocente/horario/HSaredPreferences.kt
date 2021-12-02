@@ -13,6 +13,6 @@ class HSaredPreferences(context:Context) {
     }
 
     fun getCell(name:String): String {
-        return storage.getString(name, "_")!!
+        return storage.getString(name, "")!!
     }
 }

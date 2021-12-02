@@ -41,5 +41,13 @@
     <string name="Inglés">I</string>
     <string name="Educacion_Física">EF></string>
     <string name="loading">Loading...</string>
+    <string name="horario">Horario</string>
+    <string name="t">T</string>
+    <string name="m">M</string>
+    <string name="x">X</string>
+    <string name="j">J</string>
+    <string name="l">L</string>
+    <string name="v">V</string>
+    <string name="underscore">_</string>
 
 </resources>

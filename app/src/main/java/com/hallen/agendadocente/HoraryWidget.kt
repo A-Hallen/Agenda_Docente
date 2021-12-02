@@ -57,10 +57,9 @@ internal fun updateAppWidget(
     appWidgetManager: AppWidgetManager,
     appWidgetId: Int
 ) {
-    //val widgetText = context.getString(R.string.appwidget_text)
+    Log.i("PREFS", "updateAppWidget function has been triggered")
     // Construct the RemoteViews object
     val views = RemoteViews(context.packageName, R.layout.horary_widget)
-    //views.setTextViewText(R.id.appwidget_text, widgetText)
     val serviceIntent = Intent(context, ExampleWidgetService::class.java)
     serviceIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
     serviceIntent.data = Uri.parse(serviceIntent.toUri(Intent.URI_INTENT_SCHEME))
